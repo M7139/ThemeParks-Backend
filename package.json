@@ -1,0 +1,25 @@
+{
+  "name": "themeparks-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/M7139/ThemeParks-Backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/M7139/ThemeParks-Backend/issues"
+  },
+  "homepage": "https://github.com/M7139/ThemeParks-Backend#readme",
+  "dependencies": {
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "mongoose": "^8.17.0"
+  }
+}
