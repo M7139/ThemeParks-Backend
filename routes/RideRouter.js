@@ -8,4 +8,3 @@ router.put('/:ride_id', controller.UpdateRide)
 router.delete('/:ride_id', controller.DeleteRide)
 
 module.exports = router
-
