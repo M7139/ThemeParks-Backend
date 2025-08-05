@@ -1,6 +1,5 @@
 const { Ride } = require('../models')
 
-
 const GetRides = async (req, res) => {
   try {
     const rides = await Ride.find({})
@@ -12,18 +11,17 @@ const GetRides = async (req, res) => {
 
 const GetRide = async (req, res) => {
   try {
-  const ride = await Ride.findById(req.params.ride_id)
-res.send(ride)
+    const ride = await Ride.findById(req.params.ride_id)
+    res.send(ride)
   } catch (error) {
     throw error
   }
 }
 
-
 const CreateRide = async (req, res) => {
   try {
-    const Ride = await Ride.create({ ...req.body })
-    res.send(Ride)
+    const ride = await Ride.create({ ...req.body })
+    res.send(ride)
   } catch (error) {
     throw error
   }
@@ -31,8 +29,10 @@ const CreateRide = async (req, res) => {
 
 const UpdateRide = async (req, res) => {
   try {
-    const Ride = await Ride.findByIdAndUpdate(req.params.ride_id, req.body, {new: true})
-    res.send(Ride)
+    const ride = await Ride.findByIdAndUpdate(req.params.ride_id, req.body, {
+      new: true
+    })
+    res.send(ride)
   } catch (error) {
     throw error
   }
@@ -54,5 +54,3 @@ module.exports = {
   UpdateRide,
   DeleteRide
 }
-
-
