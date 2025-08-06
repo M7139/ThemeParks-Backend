@@ -47,10 +47,22 @@ const DeleteRide = async (req, res) => {
   }
 }
 
+const SearchRide = async (req, res) => {
+  try {
+    const rides = await Ride.find({
+      title: { $regex: req.params.search_id, $options: 'i' }
+    })
+    res.send(rides)
+  } catch (error) {
+    console.log(error)
+  }
+}
+
 module.exports = {
   GetRides,
   GetRide,
   CreateRide,
   UpdateRide,
-  DeleteRide
+  DeleteRide,
+  SearchRide
 }
